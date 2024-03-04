@@ -1,0 +1,33 @@
+🧪 Coding Standard Validation:
+🎯 NoChangeExternalAPIs: False
+	wc_MakeRsaKey()関数は外部APIであり、パラメータが変更されています。これはwolfSSLのコーディング標準に違反しています。
+🎯 FunctionShouldReturnValue: True
+	すべての関数は値を返しています。
+🎯 NoRecursion: True
+	再帰的な関数の呼び出しは見られません。
+🎯 NoStandardLibAssumption: True
+	標準ライブラリ関数への依存は見られません。
+🎯 CommentForEachFunction: False
+	いくつかの関数にはコメントがありません。例えば、wc_MakeRsaKey()関数には関数の目的や戻り値の意味を説明するコメントがありません。
+🎯 UseForceZero: True
+	ForceZero()関数は使用されていませんが、機密データを扱う関数ではないため、この場合は必要ありません。
+🎯 DeclareVariablesOnTop: False
+	いくつかの関数でブロックスコープ内で変数が宣言されています。例えば、wc_MakeRsaKey()関数内でforループの中で変数iが宣言されています。
+🎯 StructMemberOrder: True
+	構造体のメンバーの順序に関する問題は見られません。
+🎯 Indentation: True
+	インデントは4スペースで統一されています。
+🎯 MaxLineLength: False
+	いくつかの行が80文字を超えています。例えば、wc_MakeRsaKey()関数内のコメント行が80文字を超えています。
+🎯 VariableNaming: True
+	変数名は小文字で始まり、複数の単語がある場合はキャメルケースを使用しています。
+🎯 FunctionNaming: True
+	関数名はキャメルケースを使用しています。
+🎯 FunctionWithNoArgs: True
+	引数のない関数は見られません。
+🎯 ConstantNaming: True
+	定数名は大文字を使用し、単語間にアンダースコアを使用しています。
+🎯 CommentStyle: False
+	いくつかのコメントが//スタイルで書かれています。例えば、wc_MakeRsaKey()関数内のSHOW_GEN定義のコメントが//スタイルです。
+🎯 BraceStyle: True
+	ブレースのスタイルはK&Rスタイルに従っています。

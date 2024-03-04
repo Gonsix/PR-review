@@ -1,0 +1,33 @@
+🧪 Coding Standard Validation:
+🎯 NoChangeExternalAPIs: False
+	/Users/qwertyrockson/wolfssl/wolfcrypt/src/random.c: 1756-1770: wc_rng_new() 関数は、既存の API を変更している可能性があります。wc_rng_new() は、wc_InitRng() の拡張版として作成されているようですが、wc_InitRng() は引き続き存在しているため、この変更は wolfSSL のコーディング標準に違反している可能性があります。
+🎯 FunctionShouldReturnValue: True
+	/Users/qwertyrockson/wolfssl/wolfcrypt/src/random.c: すべての関数は値を返しています。void 関数は存在しないため、この規則に従っています。
+🎯 NoRecursion: True
+	/Users/qwertyrockson/wolfssl/wolfcrypt/src/random.c: 再帰は使用されていません。すべての関数は反復的なソリューションを使用しています。
+🎯 NoStandardLibAssumption: True
+	/Users/qwertyrockson/wolfssl/wolfcrypt/src/random.c: 標準ライブラリ関数は使用されておらず、Xマクロが使用されています。例えば、XMEMCPY()、XMALLOC() などが使用されています。
+🎯 CommentForEachFunction: False
+	/Users/qwertyrockson/wolfssl/wolfcrypt/src/random.c: すべての関数にコメントがあるわけではありません。例えば、wc_rng_new() 関数にはコメントがありません。
+🎯 UseForceZero: True
+	/Users/qwertyrockson/wolfssl/wolfcrypt/src/random.c: ForceZero() は、機密データをゼロ化するために使用されています。例えば、ForceZero(digest, WC_SHA256_DIGEST_SIZE); が使用されています。
+🎯 DeclareVariablesOnTop: True
+	/Users/qwertyrockson/wolfssl/wolfcrypt/src/random.c: すべての変数は関数の先頭で宣言されています。
+🎯 StructMemberOrder: True
+	/Users/qwertyrockson/wolfssl/wolfcrypt/src/random.c: 構造体のメンバーはサイズの降順で宣言されています。
+🎯 Indentation: True
+	/Users/qwertyrockson/wolfssl/wolfcrypt/src/random.c: インデントは4スペースで統一されています。
+🎯 MaxLineLength: True
+	/Users/qwertyrockson/wolfssl/wolfcrypt/src/random.c: すべての行は80文字以内です。
+🎯 VariableNaming: True
+	/Users/qwertyrockson/wolfssl/wolfcrypt/src/random.c: 変数名は小文字で始まり、複数の単語がある場合はキャメルケースを使用しています。
+🎯 FunctionNaming: True
+	/Users/qwertyrockson/wolfssl/wolfcrypt/src/random.c: 関数名はキャメルケースを使用しています。
+🎯 FunctionWithNoArgs: True
+	/Users/qwertyrockson/wolfssl/wolfcrypt/src/random.c: 引数がない関数は (void) を使用しています。
+🎯 ConstantNaming: True
+	/Users/qwertyrockson/wolfssl/wolfcrypt/src/random.c: 定数名はすべて大文字で、単語はアンダースコアで区切られています。
+🎯 CommentStyle: True
+	/Users/qwertyrockson/wolfssl/wolfcrypt/src/random.c: コメントは /* ... */ スタイルを使用しています。
+🎯 BraceStyle: True
+	/Users/qwertyrockson/wolfssl/wolfcrypt/src/random.c: if文はK&Rスタイルを使用しており、関数定義のブレースは常に新しい行で始まっています。
